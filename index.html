@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+
+
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+  <title>AhmadNaser.com - Sample Demo</title>
+
+  <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap.icon-large.min.css">
+  <link rel="stylesheet" type="text/css" media="all" href="css/bootstrap-responsive.min.css">
+
+    <link rel="stylesheet" type="text/css" media="all" href="css/style.css">
+
+  	  <script type="text/javascript" language="javascript" charset="utf-8" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" language="javascript" charset="utf-8" src="js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="css/prettyPhoto.css" type="text/css" media="screen" title="prettyPhoto main stylesheet" charset="utf-8" />
+	<script src="js/jquery.prettyPhoto.js" type="text/javascript" charset="utf-8"></script>
+	
+	<script>
+	$(document).ready(function(){
+	
+	/*
+	JSON
+	- is an event data type , begin and end with {}
+	- it might contain other events data types such as
+    >Array
+    >Date
+    >function
+    >null
+    ......
+    
+	-Array might be a collection of objects [obj,obj]
+	-you can validate json object using
+	-http://jsonlint.com/
+	-use the (.) to reference internal json elemens just like pojo
+	*/
+	
+	
+	//Define JSON Object of images inside gallary
+	
+	var gallary={
+	"gallary":[
+	{
+	"id":"1",
+	"title":"this is the photo description of image",
+	"imag":"./images/1.jpg"
+	},
+	{
+		"id":"2",
+	"title":"this is the photo description of image",
+	"imag":"./images/2.jpg"
+	},
+	{
+		"id":"3",
+	"title":"this is the photo description of image",
+	"imag":"./images/3.jpg"
+	},
+		{
+		"id":"4",
+	"title":"this is the photo description of image",
+	"imag":"./images/4.jpg"
+	}
+	
+	],
+	"writer":"ahmad",
+	"date":"15-9-1999",
+	"skills":[{"name":"java"},{"name":"C#"}]
+	
+	
+	};
+
+
+	  
+	//Loop across the gallary images
+
+	for(var i=0;i<gallary.gallary.length;i++)
+	{
+	
+	
+	//get the title and image of each element in the gallary
+	
+	var title=gallary.gallary[i].title;
+	var image=gallary.gallary[i].imag;
+	//console.log(gallary.gallary[i].imag);
+	
+	
+	
+	//generate the html content for json data
+	
+	var html=
+	'<div class="box">'+
+    '<a class="abc"  href="'+gallary.gallary[i].imag+'" rel="prettyPhoto[gallery1]"><img src="'+gallary.gallary[i].imag+'" /></a>'+
+    '<div><a>this is the photo description of image</a></div>'+
+    '</div><!--box-->';
+	
+	//append generated html to box container
+	
+	$('.box-container2').append(html);
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	/*Pretty photo starts from here*/
+	
+	
+		$("a[rel^='prettyPhoto']").prettyPhoto();
+	
+		$(".box").mouseover(function(){
+		var x="<a style='color:white !important;'>this is the photo description of image</a>";
+         $(this).children('div').html(x);
+		
+     });
+	
+			$(".box").mouseout(function(){
+		var x="<a >this is the photo description of image</a>";
+         $(this).children('div').html(x);
+		
+     });
+	
+	});
+	
+
+	</script>
+</head>
+<body>
+
+<div id="page">
+
+<h1 class="h1-begin">Welcome , Photo Gallary</h1>
+
+
+<div class="box-container1">
+<h1>Via HTML</h1>
+<div class="box">
+<a class="abc" href="images/1.jpg" rel='prettyPhoto[gallery1]'><img src="images/1.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+<div class="box">
+<a class="abc" href="images/2.jpg" rel='prettyPhoto[gallery1]'><img src="images/2.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+<div class="box">
+<a class="abc"  href="images/3.jpg" rel='prettyPhoto[gallery1]'><img src="images/3.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+<div class="box">
+<a class="abc" href="images/4.jpg" rel='prettyPhoto'><img src="images/4.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+<div class="box">
+<a class="abc" href="images/1.jpg"  rel='prettyPhoto'><img src="images/1.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+<div class="box">
+<a class="abc" href="images/1.jpg" rel='prettyPhoto'><img src="images/1.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+
+<div class="box">
+<a class="abc" href="images/1.jpg" rel='prettyPhoto'><img src="images/1.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+<div class="box">
+<a class="abc" href="images/2.jpg" rel='prettyPhoto'><img src="images/2.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+<div class="box">
+<a class="abc"  href="images/3.jpg" rel='prettyPhoto'><img src="images/3.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+<div class="box">
+<a class="abc" href="images/4.jpg" rel='prettyPhoto'><img src="images/4.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+<div class="box">
+<a class="abc" href="images/1.jpg"  rel='prettyPhoto'><img src="images/1.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+<div class="box">
+<a class="abc" href="images/1.jpg" rel='prettyPhoto'><img src="images/1.jpg" /></a>
+
+<div><a>this is the photo description of image</a></div>
+</div>
+
+
+
+
+</div><!--box-container1-->
+
+
+
+
+<div class="box-container2">
+<h1>Via JSON</h1>
+
+
+</div><!--box-container2-->
+
+
+
+</div><!--page-->
+
+</body>
+</html>

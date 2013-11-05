@@ -1,0 +1,65 @@
+#page
+{
+
+width:1030px;
+height:2100px;
+margin:0 auto;
+padding:5px;
+background:#7F0000;
+}
+h1 
+{
+color: #FFF !important;
+}
+
+.h1-begin
+{
+color: #BF0000;
+width: 510px;
+margin: 0 auto 60px auto;
+}
+
+.box-container1 {
+background: #400000;
+width: 920px;
+height: 938px;
+margin: 10px auto;
+padding: 10px;
+}
+
+.box-container2 {
+background: #400000;
+width: 920px;
+height: 898px;
+margin: 101px auto;
+padding: 10px;
+}
+
+.box img{
+width: 284px;
+height: 180px;
+}
+
+.box {
+color: #FF0000 !important;
+width: 284px;
+height: 200px;
+float: left;
+border: 1px dotted #BF0000;
+cursor: pointer;
+margin: 10px;
+}
+
+
+.box:hover
+{
+background:#E50000;
+}
+
+
+
+.box a
+{
+
+color:#BF0000 !important;
+}
